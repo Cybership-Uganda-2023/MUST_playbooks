@@ -1,7 +1,7 @@
 ---
 - hosts: Wazuh-indexer
   roles:
-    - role: ../roles/wazuh/wazuh-indexer
+    - role: ../../roles/wazuh/wazuh-indexer
       perform_installation: false
   become: no
   vars:
@@ -18,8 +18,8 @@
   become: yes
   become_user: root
   roles:
-    - role: ../roles/wazuh/wazuh-indexer
-    - role: ../roles/wazuh/wazuh-dashboard
+    - role: ../../roles/wazuh/wazuh-indexer
+    - role: ../../roles/wazuh/wazuh-dashboard
 
   vars:
     single_node: true

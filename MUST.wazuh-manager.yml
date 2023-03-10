@@ -1,8 +1,8 @@
 ---
 - hosts: Wazuh-manager
   roles:
-    - role: ../roles/wazuh/ansible-wazuh-manager
-    - role: ../roles/wazuh/ansible-filebeat-oss
+    - role: ../../roles/wazuh/ansible-wazuh-manager
+    - role: ../../roles/wazuh/ansible-filebeat-oss
       filebeat_output_indexer_hosts:
       - "{{ indexer_network_host }}:9200"
   vars_files:
