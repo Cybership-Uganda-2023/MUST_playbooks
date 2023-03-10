@@ -9,7 +9,7 @@
     instances:
       node1:
         name: node-1       # Important: must be equal to indexer_node_name.
-        ip: 127.0.0.1
+        ip: 0.0.0.0 # 127.0.0.1
         role: indexer
   tags:
     - generate-certs
@@ -23,10 +23,13 @@
 
   vars:
     single_node: true
-    indexer_network_host: 127.0.0.1
+    indexer_network_host: "{{ indexer_network_host }}"
     ansible_shell_allow_world_readable_temp: true
     instances:           # A certificate will be generated for every node using the name as CN.
       node1:
         name: node-1
-        ip: 127.0.0.1
+        ip: 0.0.0.0 # 127.0.0.1
         role: indexer
+
+  vars_files:
+    - ./vars/vars-development.yml
