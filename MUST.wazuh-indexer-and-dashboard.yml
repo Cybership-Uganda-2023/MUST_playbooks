@@ -9,7 +9,7 @@
     instances:
       node1:
         name: node-1       # Important: must be equal to indexer_node_name.
-        ip: 0.0.0.0 # 127.0.0.1
+        ip: 127.0.0.1
         role: indexer
   tags:
     - generate-certs
@@ -28,7 +28,7 @@
     instances:           # A certificate will be generated for every node using the name as CN.
       node1:
         name: node-1
-        ip: 0.0.0.0 # 127.0.0.1
+        ip: 127.0.0.1
         role: indexer
 
   vars_files:
