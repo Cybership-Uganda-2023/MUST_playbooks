@@ -10,6 +10,7 @@ sudo systemctl status wazuh-dashboard
 ## On the manager
 sudo systemctl status wazuh-manager
 sudo systemctl status filebeat
+sudo filebeat test output
 
 ## On the agents
 sudo systemctl status wazuh-agent
