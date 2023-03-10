@@ -4,6 +4,6 @@
     - role: ../../roles/wazuh/ansible-wazuh-manager
     - role: ../../roles/wazuh/ansible-filebeat-oss
       filebeat_output_indexer_hosts:
-      - "{{ indexer_network_host }}:9200"
+      - "{{ indexer_network_host }}" #:9200
   vars_files:
     - ./vars/vars-development.yml
