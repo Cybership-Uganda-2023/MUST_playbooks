@@ -1,0 +1,23 @@
+# Testing
+
+sudo ansible Wazuh-agent -m ping
+
+## On the indexer
+sudo systemctl status wazuh-indexer
+## On the dashboard
+sudo systemctl status wazuh-dashboard
+
+## On the manager
+sudo systemctl status wazuh-manager
+sudo systemctl status filebeat
+
+## On the agents
+sudo systemctl status wazuh-agent
+
+# Executing
+
+sudo ansible-playbook MUST.wazuh-indexer-and-dashboard.yml -i inventory -b -K
+
+sudo ansible-playbook MUST.wazuh-manager.yml -i inventory -b -K
+
+sudo ansible-playbook MUST.wazuh-agents.yml -i inventory -b -K
