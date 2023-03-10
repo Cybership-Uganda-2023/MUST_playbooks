@@ -1,0 +1,5 @@
+---
+# ./vars/vars-development.yml
+indexer_network_host: '10.10.1.14'
+manager_network_host: '10.1.1.11'
+dashboard_network_host: '10.1.1.5'

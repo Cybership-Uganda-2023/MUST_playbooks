@@ -1,0 +1,9 @@
+---
+- hosts: Wazuh-dashboard
+  roles:
+    - role: ../roles/wazuh/wazuh-dashboard
+  vars:
+    ansible_shell_allow_world_readable_temp: true
+    indexer_network_host: "{{ indexer_network_host }}"
+  vars_files:
+    - ./vars/vars-development.yml
