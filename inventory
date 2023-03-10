@@ -2,10 +2,10 @@
 ### Variables ###
 #################
 
-indexer     ansible_host="52.90.157.3" private_ip="10.10.1.4" indexer_node_name=node-1
-dashboard   ansible_host="52.90.157.3" private_ip="10.10.1.4"
-manager     ansible_host="54.145.42.192" private_ip="10.10.1.11"
-agent       ansible_host="3.85.140.44" private_ip="10.10.1.7"
+indexer     ansible_host="52.90.157.3"      private_ip="10.10.1.4"  indexer_node_name=node-1
+dashboard   ansible_host="52.90.157.3"      private_ip="10.10.1.4"
+manager     ansible_host="54.145.42.192"    private_ip="10.10.1.11"
+agent       ansible_host="3.85.140.44"      private_ip="10.10.1.7"
 
 
 ##############
