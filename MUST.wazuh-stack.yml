@@ -31,10 +31,10 @@
         name: node-1
         ip: 127.0.0.1
         role: stack
-    wazuh_api_credentials:
-      - id: default
-        url: https://{{ stack_network_host }}
-        port: 55000
+    # wazuh_api_credentials:
+    #   - id: default
+    #     url: https://{{ stack_network_host }}
+    #     port: 55000
   vars_files:
     - ./vars/vars-development.yml
 
