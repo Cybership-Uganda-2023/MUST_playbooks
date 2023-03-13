@@ -1,6 +1,6 @@
 # source: https://computingforgeeks.com/deploy-wazuh-on-linux-using-ansible/
 ---
-- hosts: Wazuh-manager
+- hosts: Wazuh-stack
   roles:
     - role: ../../roles/wazuh/wazuh-indexer
       perform_installation: false
@@ -15,7 +15,7 @@
   tags:
     - generate-certs
 
-- hosts: Wazuh-manager
+- hosts: Wazuh-stack
   become: yes
   become_user: root
   roles:
@@ -38,7 +38,7 @@
   vars_files:
     - ./vars/vars-development.yml
 
-- hosts: Wazuh-manager
+- hosts: Wazuh-stack
   roles:
     - role: ../../roles/wazuh/ansible-wazuh-manager
     - role: ../../roles/wazuh/ansible-filebeat-oss
