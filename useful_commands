@@ -1,6 +1,20 @@
+# Executing
+
+sudo ansible-playbook MUST.wazuh-indexer-and-dashboard.yml -i inventory -b -K
+
+sudo ansible-playbook MUST.wazuh-manager.yml -i inventory -b -K
+
+sudo ansible-playbook MUST.wazuh-agents.yml -i inventory -b -K
+
+sudo ansible-playbook MUST.wazuh-stack.yml -i inventory -b -K
+
 # Testing
 
+## Ansible installation
+
+ansible --version
 sudo ansible Wazuh-agent -m ping
+sudo ansible all -m ping
 
 ## On the indexer
 sudo systemctl status wazuh-indexer
@@ -14,11 +28,3 @@ sudo filebeat test output
 
 ## On the agents
 sudo systemctl status wazuh-agent
-
-# Executing
-
-sudo ansible-playbook MUST.wazuh-indexer-and-dashboard.yml -i inventory -b -K
-
-sudo ansible-playbook MUST.wazuh-manager.yml -i inventory -b -K
-
-sudo ansible-playbook MUST.wazuh-agents.yml -i inventory -b -K
