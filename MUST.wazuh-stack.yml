@@ -33,7 +33,7 @@
         role: indexer
     wazuh_api_credentials:
       - id: default
-        url: https://{{ manager_network_host }}
+        url: https://{{ stack_network_host }}
         port: 55000
   vars_files:
     - ./vars/vars-development.yml

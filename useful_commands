@@ -13,8 +13,9 @@ sudo ansible-playbook MUST.wazuh-stack.yml -i inventory -b -K
 ## Ansible installation
 
 ansible --version
-sudo ansible Wazuh-agent -m ping
-sudo ansible all -m ping
+sudo ansible Wazuh-agent -m ping -i inventory
+sudo ansible Wazuh-stack -m ping -i inventory
+sudo ansible all -m ping -i inventory
 
 ## On the indexer
 sudo systemctl status wazuh-indexer
