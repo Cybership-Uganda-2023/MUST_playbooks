@@ -1,3 +1,5 @@
+# source: https://computingforgeeks.com/deploy-wazuh-on-linux-using-ansible/
+---
 - hosts: Wazuh-manager
   roles:
     - role: ../../roles/wazuh/wazuh-indexer

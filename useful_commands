@@ -18,6 +18,7 @@ sudo ansible all -m ping
 
 ## On the indexer
 sudo systemctl status wazuh-indexer
+curl -k -u admin:changeme https://localhost:9200
 ## On the dashboard
 sudo systemctl status wazuh-dashboard
 
