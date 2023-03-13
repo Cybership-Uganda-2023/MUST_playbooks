@@ -10,8 +10,10 @@ sudo ansible-playbook MUST.wazuh-stack.yml -i inventory -b -K
 
 # Testing
 
-## Ansible installation
+TOKEN=$(curl -u wazuh:wazuh -k -X GET "https://<IP>:55000/security/user/authenticate?raw=true")
+curl -k -X GET "https://<IP>:55000/" -H "Authorization: Bearer $TOKEN"
 
+## Ansible installation
 ansible --version
 sudo ansible Wazuh-agent -m ping -i inventory
 sudo ansible Wazuh-stack -m ping -i inventory
