@@ -6,7 +6,7 @@
     - ../../roles/wazuh/ansible-wazuh-agent
   vars:
     wazuh_managers:
-      - address: "{{ manager_network_host }}"
+      - address: "{{ stack_network_host }}"
         port: 1514
         protocol: tcp
         api_port: 55000
