@@ -1,16 +1,7 @@
-#################
-### Variables ###
-#################
-
 indexer     ansible_host="3.89.135.221"   private_ip="10.10.1.5"  indexer_node_name=node-1
 dashboard   ansible_host="3.89.135.221"   private_ip="10.10.1.5"
 manager     ansible_host="54.145.58.128"    private_ip="10.10.1.9"
 agent       ansible_host="3.88.4.74"        private_ip="10.10.1.12"
-
-
-##############
-### Groups ###
-##############
 
 [Wazuh-manager]
 manager
