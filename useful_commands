@@ -17,9 +17,6 @@ sudo ./indexer/certificates/wazuh-certs-tool.sh -A
 
 # Testing
 
-TOKEN=$(curl -u wazuh:wazuh -k -X GET "https://localhost:55000/security/user/authenticate?raw=true")
-curl -k -X GET "https://localhost:55000/" -H "Authorization: Bearer $TOKEN"
-
 ## Ansible installation
 ansible --version
 sudo ansible Wazuh-agent -m ping -i inventory
@@ -31,6 +28,9 @@ sudo systemctl status wazuh-indexer
 curl -k -u admin:changeme https://localhost:9200
 ## On the dashboard
 sudo systemctl status wazuh-dashboard
+
+TOKEN=$(curl -u wazuh:wazuh -k -X GET "https://localhost:55000/security/user/authenticate?raw=true")
+curl -k -X GET "https://localhost:55000/" -H "Authorization: Bearer $TOKEN"
 
 ## On the manager
 sudo systemctl status wazuh-manager
