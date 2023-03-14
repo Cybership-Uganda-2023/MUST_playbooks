@@ -2,18 +2,15 @@ nodes:
   # Indexer server nodes
   indexer:
     - name: node-1
-      ip: "{{ stack_network_host }}"
+      ip: 34.201.121.77
 
   # Wazuh server nodes
   # Use node_type only with more than one Wazuh manager
   server:
     - name: node-1
-      ip: "{{ stack_network_host }}"
+      ip: 34.201.121.77
 
   # Dashboard node
   dashboard:
     - name: node-1
-      ip: "{{ stack_network_host }}"
-
-  vars_files:
-    - ../../vars/vars-development.yml
+      ip: 34.201.121.77
