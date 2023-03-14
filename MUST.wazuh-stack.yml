@@ -11,7 +11,7 @@
       node1:
         name: node-1       # Important: must be equal to indexer_node_name.
         ip: 127.0.0.1
-        role: stack
+        role: indexer
   tags:
     - generate-certs
 
@@ -30,7 +30,7 @@
       node1:
         name: node-1
         ip: 127.0.0.1
-        role: stack
+        role: indexer
     # wazuh_api_credentials:
     #   - id: default
     #     url: https://{{ stack_network_host }}
