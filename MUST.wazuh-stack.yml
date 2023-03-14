@@ -2,7 +2,7 @@
 ---
 - hosts: Wazuh-stack
   roles:
-    - role: ../../roles/wazuh/wazuh-indexer
+    - role: ../roles/wazuh/wazuh-indexer
       perform_installation: false
   become: no
   vars:
@@ -19,8 +19,8 @@
   become: yes
   become_user: root
   roles:
-    - role: ../../roles/wazuh/wazuh-indexer
-    - role: ../../roles/wazuh/wazuh-dashboard
+    - role: ../roles/wazuh/wazuh-indexer
+    - role: ../roles/wazuh/wazuh-dashboard
 
   vars:
     single_node: true
@@ -40,8 +40,8 @@
 
 - hosts: Wazuh-stack
   roles:
-    - role: ../../roles/wazuh/ansible-wazuh-manager
-    - role: ../../roles/wazuh/ansible-filebeat-oss
+    - role: ../roles/wazuh/ansible-wazuh-manager
+    - role: ../roles/wazuh/ansible-filebeat-oss
       filebeat_node_name: node-1
       filebeat_output_indexer_hosts:
       - "127.0.0.1"

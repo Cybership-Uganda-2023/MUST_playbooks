@@ -1,7 +1,7 @@
 ---
 - hosts: Wazuh-indexer
   roles:
-  - role: ../../roles/wazuh/wazuh-indexer
+  - role: ../roles/wazuh/wazuh-indexer
     perform_installation: false
   become: no
 
