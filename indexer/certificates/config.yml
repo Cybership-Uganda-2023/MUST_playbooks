@@ -2,15 +2,15 @@ nodes:
   # Indexer server nodes
   indexer:
     - name: node-1
-      ip: ec2-3-91-89-187.compute-1.amazonaws.com  # 3.91.89.187
+      ip: "ec2-3-91-89-187.compute-1.amazonaws.com"  # 3.91.89.187
 
   # Wazuh server nodes
   # Use node_type only with more than one Wazuh manager
   server:
     - name: node-1
-      ip: ec2-3-91-89-187.compute-1.amazonaws.com  # 3.91.89.187
+      ip: "ec2-3-91-89-187.compute-1.amazonaws.com"  # 3.91.89.187
 
   # Dashboard node
   dashboard:
     - name: node-1
-      ip: ec2-3-91-89-187.compute-1.amazonaws.com  # 3.91.89.187
+      ip: "ec2-3-91-89-187.compute-1.amazonaws.com"  # 3.91.89.187
