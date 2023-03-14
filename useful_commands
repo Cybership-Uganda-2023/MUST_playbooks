@@ -17,8 +17,8 @@ sudo ./indexer/certificates/wazuh-certs-tool.sh -A
 
 # Testing
 
-TOKEN=$(curl -u wazuh:wazuh -k -X GET "https://<IP>:55000/security/user/authenticate?raw=true")
-curl -k -X GET "https://<IP>:55000/" -H "Authorization: Bearer $TOKEN"
+TOKEN=$(curl -u wazuh:wazuh -k -X GET "https://localhost:55000/security/user/authenticate?raw=true")
+curl -k -X GET "https://localhost:55000/" -H "Authorization: Bearer $TOKEN"
 
 ## Ansible installation
 ansible --version
