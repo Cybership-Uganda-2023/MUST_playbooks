@@ -1,7 +1,7 @@
 # Commented out options for separate indexer, dashboard and manager instances
 
-stack       ansible_host="3.91.89.187"      private_ip="10.10.1.6"      indexer_node_name=node-1
-agent       ansible_host="18.234.39.157"    private_ip="10.10.1.12"
+stack       ansible_host="54.242.63.250"      private_ip="10.10.1.12"      indexer_node_name=node-1
+agent       ansible_host="35.172.141.124"    private_ip="10.10.1.5"
 ; indexer     ansible_host="3.89.135.221"     private_ip="10.10.1.5"  indexer_node_name=node-1
 ; dashboard   ansible_host="3.89.135.221"     private_ip="10.10.1.5"
 ; manager     ansible_host="54.145.58.128"    private_ip="10.10.1.9"
