@@ -38,3 +38,32 @@
           ip: 127.0.0.1
           role: indexer
       ansible_shell_allow_world_readable_temp: true
+      wazuh_manager_vulnerability_detector:
+        enabled: 'no'
+        interval: '5m'
+        min_full_scan_interval: '6h'
+        run_on_start: 'yes'
+        providers:
+          - enabled: 'no'
+            os:
+              - 'trusty'
+              - 'xenial'
+              - 'bionic'
+            update_interval: '1h'
+            name: '"canonical"'
+          - enabled: 'no'
+            os:
+              - 'wheezy'
+              - 'stretch'
+              - 'jessie'
+              - 'buster'
+            update_interval: '1h'
+            name: '"debian"'
+          - enabled: 'no'
+            update_from_year: '2010'
+            update_interval: '1h'
+            name: '"redhat"'
+          - enabled: 'no'
+            update_from_year: '2010'
+            update_interval: '1h'
+            name: '"nvd"'
